@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level 4 - Form Validation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+
+<div class="card bg-white" style="width: 22rem;">
+   <div class="card shadow" style="width: 32rem; font-size: 1.1rem;">  
+ <div class="card-body">
+      <span class="badge bg-primary rounded-pill p-4 py-2 mb-3"> Level 4</span>
+      <h6 class="card-subtitle mb-2 text-muted">Form Validation</h6>
+      <input type="text" id="nameInput" class="form-control mb-2" placeholder="Enter your name">
+      <button class="btn btn-primary" onclick="validateForm()">Submit</button>
+      <p id="message" class="mt-2"></p>
+      <div class="d-flex justify-content-between mt-3">
+        <a href="level3.html" class="btn btn-secondary">← Back</a>
+        <a href="level5.html" class="btn btn-dark">Next level →</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById("nameInput").value;
+      const msg = document.getElementById("message");
+      if (name.trim() === "") {
+        msg.textContent = "Error: Name is required!";
+        msg.className = "text-danger";
+      } else {
+        msg.textContent = "Hello, Welcome " + name ;
+        msg.className = "text-success";
+      }
+    }
+  </script>
+</body>
+</html>

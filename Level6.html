@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level 6 - Conditionals</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+
+  <div class="card shadow text-center" style="width: 24rem;">
+    <div class="card-body">
+      <span class="badge bg-primary rounded-pill p-4 py-2 mb-3"> Level 6</span>
+      <h6 class="card-subtitle mb-2 text-muted">Conditionals: Pick the Correct Door</h6>
+      <p class="card-text">Click a door. Only one is correct. Use if/else.</p>
+
+      <div class="mb-3">
+        <button class="btn btn-success me-2" onclick="checkDoor(1)">Door 1</button>
+        <button class="btn btn-warning me-2" onclick="checkDoor(2)">Door 2</button>
+        <button class="btn btn-danger" onclick="checkDoor(3)">Door 3</button>
+      </div>
+
+      <div id="resultMessage" class="alert d-none"></div>
+
+      <div class="d-flex justify-content-between mt-3">
+        <a href="level5.html" class="btn btn-secondary">← Back</a>
+        <a href="level1.html" class="btn btn-info">⟳ Restart (level 1)</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function checkDoor(choice) {
+      const result = document.getElementById("resultMessage");
+      // Let's say Door 2 is the correct one
+      if (choice === 2) {
+        result.textContent = "✅ Correct! You found the right door!";
+        result.className = "alert alert-success";
+      } else {
+        result.textContent = "❌ Wrong door. Try again!";
+        result.className = "alert alert-danger";
+      }
+      result.classList.remove("d-none");
+    }
+  </script>
+</body>
+</html>
