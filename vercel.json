@@ -2,8 +2,9 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/level1.html"
+      "destination": "/Level1.html"
     }
   ]
+
 
 }
